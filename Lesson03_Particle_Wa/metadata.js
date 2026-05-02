@@ -1,0 +1,360 @@
+window.CV3_BUNDLE_METADATA = {
+  "title": "Lesson03 Particle Wa",
+  "audio": "audio/final.mp3",
+  "segments": [
+    {
+      "id": "001",
+      "text": "Lesson 3",
+      "time_start": 0.0,
+      "time_end": 1.078375
+    },
+    {
+      "id": "002",
+      "text": "こんにちは!",
+      "time_start": 1.328375,
+      "time_end": 2.452792
+    },
+    {
+      "id": "003",
+      "text": "Some of you may be wondering how we got through two lessons without mentioning the は particle.",
+      "time_start": 2.702792,
+      "time_end": 8.022792
+    },
+    {
+      "id": "004",
+      "text": "Most courses introduce は from the beginning with sentences like:",
+      "time_start": 8.272792,
+      "time_end": 12.712792
+    },
+    {
+      "id": "005",
+      "text": "“わたし は あめりかじん だ”\n“ぺん は あおい”",
+      "time_start": 12.962792,
+      "time_end": 17.759583
+    },
+    {
+      "id": "006",
+      "text": "But starting this way can make Japanese structure confusing because は does not work like が を or に.",
+      "time_start": 18.009583,
+      "time_end": 28.888875
+    },
+    {
+      "id": "007",
+      "text": "The important point is this:",
+      "time_start": 29.138875,
+      "time_end": 30.794708
+    },
+    {
+      "id": "008",
+      "text": "は can never be part of the core sentence.",
+      "time_start": 31.044708,
+      "time_end": 34.428667
+    },
+    {
+      "id": "009",
+      "text": "It is not the main carriage A and it is not the engine B. It is also not a white carriage like を because を is part of the logical structure of the sentence.",
+      "time_start": 34.678667,
+      "time_end": 50.861375
+    },
+    {
+      "id": "010",
+      "text": "A noun marked with は is not part of the logical structure. は is a non-logical particle. So what does は do?",
+      "time_start": 51.111375,
+      "time_end": 61.277417
+    },
+    {
+      "id": "011",
+      "text": "It marks the topic.",
+      "time_start": 61.527417,
+      "time_end": 63.367417
+    },
+    {
+      "id": "012",
+      "text": "That is why we can picture は as a flag. It simply flags what the sentence is about. It does not tell us what is logically happening in the sentence. For example:",
+      "time_start": 63.617417,
+      "time_end": 77.697417
+    },
+    {
+      "id": "013",
+      "text": "“わたし は あめりかじん だ”",
+      "time_start": 77.947417,
+      "time_end": 80.722667
+    },
+    {
+      "id": "014",
+      "text": "This literally means: “As for me I am an American.”",
+      "time_start": 80.972667,
+      "time_end": 86.862542
+    },
+    {
+      "id": "015",
+      "text": "“わたし は” means “as for me”.\n“あめりかじん だ” means “am American”.",
+      "time_start": 87.112542,
+      "time_end": 95.865333
+    },
+    {
+      "id": "016",
+      "text": "But something is missing from the logical sentence: the invisible が-car. The full structure is:",
+      "time_start": 96.115333,
+      "time_end": 104.155333
+    },
+    {
+      "id": "017",
+      "text": "“わたし は zero が あめりかじん だ”",
+      "time_start": 104.405333,
+      "time_end": 108.917792
+    },
+    {
+      "id": "018",
+      "text": "So the meaning is: “As for me I am an American.”",
+      "time_start": 109.167792,
+      "time_end": 113.327792
+    },
+    {
+      "id": "019",
+      "text": "It may be tempting to pretend that “わたし は” is the subject of the sentence but that only works sometimes. In other cases it gives the wrong meaning. A famous example is:",
+      "time_start": 113.577792,
+      "time_end": 125.987583
+    },
+    {
+      "id": "020",
+      "text": "“わたし は うなぎ だ”",
+      "time_start": 126.237583,
+      "time_end": 129.0595
+    },
+    {
+      "id": "021",
+      "text": "うなぎ means eel.",
+      "time_start": 129.3095,
+      "time_end": 131.223125
+    },
+    {
+      "id": "022",
+      "text": "If we wrongly treat は as the subject marker we might think this means:",
+      "time_start": 131.473125,
+      "time_end": 137.751333
+    },
+    {
+      "id": "023",
+      "text": "“I am an eel.”",
+      "time_start": 138.001333,
+      "time_end": 139.626333
+    },
+    {
+      "id": "024",
+      "text": "But that is not what it means in context. The full structure is:",
+      "time_start": 139.876333,
+      "time_end": 143.252833
+    },
+    {
+      "id": "025",
+      "text": "“わたし は zero が うなぎ だ”",
+      "time_start": 143.502833,
+      "time_end": 147.290208
+    },
+    {
+      "id": "026",
+      "text": "Here zero does not mean “I”. It means “it” — the thing being discussed such as what someone is ordering for dinner. So the real meaning is:",
+      "time_start": 147.540208,
+      "time_end": 159.020208
+    },
+    {
+      "id": "027",
+      "text": "“As for me it is eel.”",
+      "time_start": 159.270208,
+      "time_end": 161.518792
+    },
+    {
+      "id": "028",
+      "text": "Or more naturally: “I’ll have the eel.”",
+      "time_start": 161.768792,
+      "time_end": 165.248792
+    },
+    {
+      "id": "029",
+      "text": "This shows why は must not be treated as the subject marker. It only marks the topic. The logical subject is still marked by が even when it is invisible.",
+      "time_start": 165.498792,
+      "time_end": 178.658792
+    },
+    {
+      "id": "030",
+      "text": "Now let’s introduce another white carriage: に.",
+      "time_start": 178.908792,
+      "time_end": 183.468792
+    },
+    {
+      "id": "031",
+      "text": "に forms a useful trio with が and を. In an “A does B” sentence:",
+      "time_start": 183.718792,
+      "time_end": 192.407167
+    },
+    {
+      "id": "032",
+      "text": "が tells us who does the action.\nを tells us what the action is done to.\nに tells us the target or destination of the action.",
+      "time_start": 192.657167,
+      "time_end": 201.116375
+    },
+    {
+      "id": "033",
+      "text": "For example:",
+      "time_start": 201.366375,
+      "time_end": 202.366375
+    },
+    {
+      "id": "034",
+      "text": "“わたし が ぼーる を なげる”",
+      "time_start": 202.616375,
+      "time_end": 205.150875
+    },
+    {
+      "id": "035",
+      "text": "ぼーる means ball and なげる means throw.",
+      "time_start": 205.400875,
+      "time_end": 211.471208
+    },
+    {
+      "id": "036",
+      "text": "So this means: “I throw a ball.”",
+      "time_start": 211.721208,
+      "time_end": 214.641208
+    },
+    {
+      "id": "037",
+      "text": "The core sentence is:",
+      "time_start": 214.891208,
+      "time_end": 216.410958
+    },
+    {
+      "id": "038",
+      "text": "“わたし が なげる” — “I throw.”",
+      "time_start": 216.660958,
+      "time_end": 220.128417
+    },
+    {
+      "id": "039",
+      "text": "The を carriage tells us what I throw: “ぼーる を” — “a ball.”",
+      "time_start": 220.378417,
+      "time_end": 226.254833
+    },
+    {
+      "id": "040",
+      "text": "Now we can add に:",
+      "time_start": 226.504833,
+      "time_end": 227.784833
+    },
+    {
+      "id": "041",
+      "text": "“わたし が ぼーる を さくら に なげる”",
+      "time_start": 228.034833,
+      "time_end": 232.438625
+    },
+    {
+      "id": "042",
+      "text": "This means:\n“I throw a ball to Sakura”\nor\n“I throw a ball at Sakura.”",
+      "time_start": 232.688625,
+      "time_end": 240.048625
+    },
+    {
+      "id": "043",
+      "text": "さくら に marks Sakura as the target or destination of the throwing.",
+      "time_start": 240.298625,
+      "time_end": 245.898625
+    },
+    {
+      "id": "044",
+      "text": "The key point is that Japanese particles tell us the logic of the sentence. Word order is much less important than in English. For example:",
+      "time_start": 246.148625,
+      "time_end": 255.153667
+    },
+    {
+      "id": "045",
+      "text": "“わたし に さくら が ぼーる を なげる”",
+      "time_start": 255.403667,
+      "time_end": 260.488667
+    },
+    {
+      "id": "046",
+      "text": "This means:\n“Sakura throws the ball at me.”",
+      "time_start": 260.738667,
+      "time_end": 262.858667
+    },
+    {
+      "id": "047",
+      "text": "And:\n“ぼーる が わたし に さくら を なげる”",
+      "time_start": 263.108667,
+      "time_end": 269.188667
+    },
+    {
+      "id": "048",
+      "text": "This means:\n“The ball throws Sakura at me.”",
+      "time_start": 269.438667,
+      "time_end": 271.718667
+    },
+    {
+      "id": "049",
+      "text": "That sentence is strange but grammatically the particles still tell us who is doing what to whom.\nNow let’s bring は back into the sentence.",
+      "time_start": 271.968667,
+      "time_end": 282.488667
+    },
+    {
+      "id": "050",
+      "text": "“わたし は さくら に ぼーる を なげる”",
+      "time_start": 282.738667,
+      "time_end": 286.542208
+    },
+    {
+      "id": "051",
+      "text": "The full structure is:\n“わたし は zero が さくら に ぼーる を なげる”",
+      "time_start": 286.792208,
+      "time_end": 296.512208
+    },
+    {
+      "id": "052",
+      "text": "This means:\n“As for me I throw the ball at Sakura.”",
+      "time_start": 296.762208,
+      "time_end": 300.682208
+    },
+    {
+      "id": "053",
+      "text": "Now let’s move は to the ball:\n“ぼーる は わたし が さくら に なげる”",
+      "time_start": 300.932208,
+      "time_end": 309.252208
+    },
+    {
+      "id": "054",
+      "text": "This means:\n“As for the ball I throw it at Sakura.”",
+      "time_start": 309.502208,
+      "time_end": 313.222208
+    },
+    {
+      "id": "055",
+      "text": "Notice the difference.\nWhen we change logical particles like が を or に the actual logic of the sentence changes.",
+      "time_start": 313.472208,
+      "time_end": 322.072208
+    },
+    {
+      "id": "056",
+      "text": "But when we move は the logic does not change. Only the topic or emphasis changes.So:",
+      "time_start": 322.322208,
+      "time_end": 331.18775
+    },
+    {
+      "id": "057",
+      "text": "“わたし は...” means we are talking about me.\n“ぼーる は...” means we are talking about the ball.",
+      "time_start": 331.43775,
+      "time_end": 341.56975
+    },
+    {
+      "id": "058",
+      "text": "But who throws what is thrown and who it is thrown to are still decided by が を and に.",
+      "time_start": 341.81975,
+      "time_end": 350.266917
+    },
+    {
+      "id": "059",
+      "text": "That is the difference between logical particles and the non-logical topic particle は.",
+      "time_start": 350.516917,
+      "time_end": 356.196917
+    }
+  ]
+};

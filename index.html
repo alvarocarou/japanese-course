@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Organic Japanese Audiobook</title>
+  <link rel="icon" href="data:,">
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f7f7f2;
+      --ink: #171815;
+      --muted: #656960;
+      --line: #d9ddd1;
+      --panel: #ffffff;
+      --panel-soft: rgba(255, 255, 255, 0.72);
+      --body-text: #3f433d;
+      --accent: #c43e22;
+      --accent-2: #176f63;
+      --accent-3: #274c9b;
+      --grid-a: rgba(23, 111, 99, 0.08);
+      --grid-b: rgba(196, 62, 34, 0.07);
+      --stripe: rgba(39, 76, 155, 0.07);
+      --input-shadow: 0 8px 24px rgba(24, 25, 21, 0.05);
+      --shadow: 0 18px 55px rgba(24, 25, 21, 0.10);
+    }
+
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --paper: #121410;
+      --ink: #ece7d9;
+      --muted: #a6a99d;
+      --line: #3b4036;
+      --panel: #1b1f19;
+      --panel-soft: rgba(27, 31, 25, 0.82);
+      --body-text: #c9c8bb;
+      --accent: #ff8a65;
+      --accent-2: #73c7ab;
+      --accent-3: #8ea8ff;
+      --grid-a: rgba(115, 199, 171, 0.10);
+      --grid-b: rgba(255, 138, 101, 0.08);
+      --stripe: rgba(142, 168, 255, 0.10);
+      --input-shadow: 0 10px 28px rgba(0, 0, 0, 0.24);
+      --shadow: 0 18px 60px rgba(0, 0, 0, 0.42);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background:
+        linear-gradient(90deg, var(--grid-a) 1px, transparent 1px) 0 0 / 72px 72px,
+        linear-gradient(180deg, var(--grid-b) 1px, transparent 1px) 0 0 / 72px 72px,
+        var(--paper);
+      color: var(--ink);
+      font-family: Avenir Next, "Hiragino Sans", "Yu Gothic", "YuGothic", Verdana, sans-serif;
+      transition: background-color 160ms ease, color 160ms ease;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    .lesson[hidden]::after {
+      content: none;
+    }
+
+    .shell {
+      width: min(1120px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 30px 0 52px;
+    }
+
+    .masthead {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 28px;
+      align-items: end;
+      padding: 22px 0 26px;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent-2);
+      font: 700 12px/1.2 "Courier New", monospace;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 780px;
+      margin: 0;
+      font-family: Georgia, "Hiragino Mincho ProN", "Yu Mincho", serif;
+      font-size: clamp(38px, 7vw, 84px);
+      font-weight: 600;
+      line-height: 0.96;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(112px, 1fr));
+      gap: 8px;
+      min-width: 250px;
+    }
+
+    .stat {
+      min-height: 86px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      background: var(--panel-soft);
+    }
+
+    .stat strong {
+      display: block;
+      font: 700 25px/1 Georgia, serif;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.25;
+    }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto auto auto;
+      gap: 14px;
+      align-items: center;
+      margin: 24px 0;
+    }
+
+    .search {
+      width: 100%;
+      height: 46px;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--panel);
+      color: var(--ink);
+      font: 16px/1 Avenir Next, "Hiragino Sans", "Yu Gothic", sans-serif;
+      box-shadow: var(--input-shadow);
+    }
+
+    .search:focus {
+      outline: 2px solid var(--accent-3);
+      outline-offset: 2px;
+    }
+
+    .folder-note {
+      color: var(--muted);
+      font: 13px/1.3 "Courier New", monospace;
+      white-space: nowrap;
+    }
+
+    .language-toggle {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+      height: 46px;
+      min-width: 92px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--panel);
+    }
+
+    .language-toggle button {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font: 700 12px/1 "Courier New", monospace;
+    }
+
+    .language-toggle button[aria-pressed="true"] {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .theme-button {
+      height: 46px;
+      min-width: 86px;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--ink);
+      color: var(--paper);
+      cursor: pointer;
+      font: 700 12px/1 "Courier New", monospace;
+      text-transform: uppercase;
+      transition: transform 140ms ease, background 140ms ease, color 140ms ease;
+    }
+
+    .theme-button:hover,
+    .theme-button:focus-visible,
+    .language-toggle button:focus-visible {
+      transform: translateY(-1px);
+      outline: 2px solid var(--accent-3);
+      outline-offset: 2px;
+    }
+
+    .lessons {
+      display: grid;
+      gap: 14px;
+    }
+
+    .lesson {
+      position: relative;
+      display: grid;
+      grid-template-columns: 90px minmax(0, 1fr) 148px;
+      gap: 18px;
+      align-items: stretch;
+      overflow: hidden;
+      min-height: 176px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: 0 1px 0 rgba(24, 25, 21, 0.04);
+      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+    }
+
+    .lesson:hover,
+    .lesson:focus-visible {
+      border-color: color-mix(in srgb, var(--accent-2) 58%, var(--line));
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+      outline: 0;
+    }
+
+    .lesson-number {
+      display: grid;
+      place-items: center;
+      background: var(--ink);
+      color: var(--paper);
+      font: 700 22px/1 "Courier New", monospace;
+    }
+
+    .lesson-body {
+      min-width: 0;
+      padding: 20px 0;
+    }
+
+    .lesson-title {
+      margin: 0 0 10px;
+      font-family: Georgia, "Hiragino Mincho ProN", "Yu Mincho", serif;
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 600;
+      line-height: 1.05;
+    }
+
+    .lesson-summary {
+      max-width: 760px;
+      margin: 0;
+      color: var(--body-text);
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .lesson-path {
+      display: block;
+      margin-top: 16px;
+      color: var(--muted);
+      font: 12px/1.4 "Courier New", monospace;
+      overflow-wrap: anywhere;
+    }
+
+    .lesson-meta {
+      display: grid;
+      align-content: stretch;
+      border-left: 1px solid var(--line);
+      background:
+        repeating-linear-gradient(
+          -45deg,
+          var(--stripe) 0,
+          var(--stripe) 8px,
+          transparent 8px,
+          transparent 16px
+        );
+    }
+
+    .meta-cell {
+      display: grid;
+      align-content: center;
+      min-height: 58px;
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-cell:last-child {
+      border-bottom: 0;
+    }
+
+    .meta-cell strong {
+      font: 700 17px/1 "Courier New", monospace;
+    }
+
+    .meta-cell span {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .lesson::after {
+      content: attr(data-action);
+      position: absolute;
+      right: 14px;
+      bottom: 12px;
+      color: var(--accent);
+      font: 700 12px/1 "Courier New", monospace;
+      text-transform: uppercase;
+    }
+
+    .empty {
+      display: none;
+      padding: 28px;
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      background: var(--panel-soft);
+      color: var(--muted);
+      text-align: center;
+    }
+
+    body.no-results .empty {
+      display: block;
+    }
+
+    body.no-results .lessons {
+      display: none;
+    }
+
+    @media (max-width: 820px) {
+      .masthead,
+      .lesson {
+        grid-template-columns: 1fr;
+      }
+
+      .toolbar {
+        grid-template-columns: 1fr auto auto;
+      }
+
+      .search {
+        grid-column: 1 / -1;
+      }
+
+      .stats {
+        min-width: 0;
+      }
+
+      .folder-note {
+        white-space: normal;
+      }
+
+      .lesson {
+        min-height: 0;
+      }
+
+      .lesson-number {
+        min-height: 56px;
+        place-items: center start;
+        padding-left: 18px;
+      }
+
+      .lesson-body {
+        padding: 4px 18px 18px;
+      }
+
+      .lesson-meta {
+        grid-template-columns: repeat(3, 1fr);
+        border-top: 1px solid var(--line);
+        border-left: 0;
+      }
+
+      .meta-cell {
+        border-right: 1px solid var(--line);
+        border-bottom: 0;
+      }
+
+      .meta-cell:last-child {
+        border-right: 0;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .shell {
+        width: min(100vw - 22px, 1120px);
+        padding-top: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <div>
+        <p class="eyebrow">Organic Japanese Audiobook</p>
+        <h1 data-i18n="title">Índice de lecciones</h1>
+      </div>
+      <div class="stats" aria-label="Resumen de recursos" data-i18n-aria="statsLabel">
+        <div class="stat">
+          <strong>3</strong>
+          <span data-i18n="statLessons">lecciones</span>
+        </div>
+        <div class="stat">
+          <strong>12:20</strong>
+          <span data-i18n="statAudio">audio total</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="toolbar" aria-label="Herramientas del índice" data-i18n-aria="toolbarLabel">
+      <input id="search" class="search" type="search" placeholder="Buscar por tema, partícula o carpeta..." autocomplete="off">
+      <span class="folder-note" data-i18n="folderNote">Abre cada lección en su reproductor HTML</span>
+      <div class="language-toggle" aria-label="Language">
+        <button id="langEn" type="button" data-lang-option="en">EN</button>
+        <button id="langEs" type="button" data-lang-option="es">ES</button>
+      </div>
+      <button id="themeButton" class="theme-button" type="button" aria-label="Cambiar modo oscuro">Dark</button>
+    </section>
+
+    <section id="lessons" class="lessons" aria-label="Lecciones" data-i18n-aria="lessonsLabel">
+      <a class="lesson" href="Lesson01_Core_Japanese_Sentence/index.html" data-search="lesson 1 core japanese sentence oración núcleo が だ い adjective sentence train">
+        <div class="lesson-number">01</div>
+        <div class="lesson-body">
+          <h2 class="lesson-title">Core Japanese Sentence</h2>
+          <p class="lesson-summary" data-lesson-summary="0">La estructura base de las frases japonesas: A が verbo, A が B だ y A が adjetivo en い.</p>
+          <span class="lesson-path">Lesson01_Core_Japanese_Sentence/index.html</span>
+        </div>
+        <div class="lesson-meta" aria-label="Datos de Lesson 1" data-lesson-meta="1">
+          <div class="meta-cell">
+            <strong>4:27</strong>
+            <span data-i18n="duration">duración</span>
+          </div>
+          <div class="meta-cell">
+            <strong>36</strong>
+            <span data-i18n="segments">segmentos</span>
+          </div>
+          <div class="meta-cell">
+            <strong>5.1 MB</strong>
+            <span data-i18n="audio">audio</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="lesson" href="Lesson02_Core_Japanese_Sentence_2/index.html" data-search="lesson 2 core sentences invisible carriage zero pronoun を object japanese sentence">
+        <div class="lesson-number">02</div>
+        <div class="lesson-body">
+          <h2 class="lesson-title">Core Sentences 2</h2>
+          <p class="lesson-summary" data-lesson-summary="1">El sujeto invisible, el pronombre cero y el vagón を para marcar aquello sobre lo que actúa la acción.</p>
+          <span class="lesson-path">Lesson02_Core_Japanese_Sentence_2/index.html</span>
+        </div>
+        <div class="lesson-meta" aria-label="Datos de Lesson 2" data-lesson-meta="2">
+          <div class="meta-cell">
+            <strong>4:49</strong>
+            <span data-i18n="duration">duración</span>
+          </div>
+          <div class="meta-cell">
+            <strong>46</strong>
+            <span data-i18n="segments">segmentos</span>
+          </div>
+          <div class="meta-cell">
+            <strong>5.5 MB</strong>
+            <span data-i18n="audio">audio</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="lesson" href="Lesson03_Particle_Wa/index.html" data-search="lesson 3 particle wa は topic が を に japanese grammar flag">
+        <div class="lesson-number">03</div>
+        <div class="lesson-body">
+          <h2 class="lesson-title">Particle Wa</h2>
+          <p class="lesson-summary" data-lesson-summary="2">La partícula は como marcador de tema, su diferencia con が y la introducción de に como destino.</p>
+          <span class="lesson-path">Lesson03_Particle_Wa/index.html</span>
+        </div>
+        <div class="lesson-meta" aria-label="Datos de Lesson 3" data-lesson-meta="3">
+          <div class="meta-cell">
+            <strong>5:56</strong>
+            <span data-i18n="duration">duración</span>
+          </div>
+          <div class="meta-cell">
+            <strong>59</strong>
+            <span data-i18n="segments">segmentos</span>
+          </div>
+          <div class="meta-cell">
+            <strong>7.3 MB</strong>
+            <span data-i18n="audio">audio</span>
+          </div>
+        </div>
+      </a>
+    </section>
+
+    <p class="empty" data-i18n="empty">No hay lecciones que coincidan con esa búsqueda.</p>
+  </main>
+
+  <script>
+    "use strict";
+
+    const search = document.getElementById("search");
+    const themeButton = document.getElementById("themeButton");
+    const languageButtons = Array.from(document.querySelectorAll("[data-lang-option]"));
+    const lessons = Array.from(document.querySelectorAll(".lesson"));
+    const translations = {
+      en: {
+        title: "Lesson Index",
+        statsLabel: "Resource summary",
+        statLessons: "lessons",
+        statAudio: "total audio",
+        toolbarLabel: "Index tools",
+        lessonsLabel: "Lessons",
+        folderNote: "Open each lesson in its HTML player",
+        searchPlaceholder: "Search by topic, particle, or folder...",
+        themeAria: "Toggle dark mode",
+        themeDark: "Dark",
+        themeLight: "Light",
+        duration: "duration",
+        segments: "segments",
+        audio: "audio",
+        open: "Open",
+        empty: "No lessons match that search.",
+        lessonMeta: lessonNumber => `Lesson ${lessonNumber} details`,
+        summaries: [
+          "The base structure of Japanese sentences: A が verb, A が B だ, and A が い-adjective.",
+          "The invisible subject, the zero pronoun, and the を carriage for marking what an action acts on.",
+          "The particle は as a topic marker, how it differs from が, and the introduction of に as a target."
+        ]
+      },
+      es: {
+        title: "Índice de lecciones",
+        statsLabel: "Resumen de recursos",
+        statLessons: "lecciones",
+        statAudio: "audio total",
+        toolbarLabel: "Herramientas del índice",
+        lessonsLabel: "Lecciones",
+        folderNote: "Abre cada lección en su reproductor HTML",
+        searchPlaceholder: "Buscar por tema, partícula o carpeta...",
+        themeAria: "Cambiar modo oscuro",
+        themeDark: "Dark",
+        themeLight: "Light",
+        duration: "duración",
+        segments: "segmentos",
+        audio: "audio",
+        open: "Abrir",
+        empty: "No hay lecciones que coincidan con esa búsqueda.",
+        lessonMeta: lessonNumber => `Datos de Lesson ${lessonNumber}`,
+        summaries: [
+          "La estructura base de las frases japonesas: A が verbo, A が B だ y A が adjetivo en い.",
+          "El sujeto invisible, el pronombre cero y el vagón を para marcar aquello sobre lo que actúa la acción.",
+          "La partícula は como marcador de tema, su diferencia con が y la introducción de に como destino."
+        ]
+      }
+    };
+    let currentLanguage = getInitialLanguage();
+
+    function getInitialLanguage() {
+      const stored = localStorage.getItem("oja-index-language");
+      if (stored === "en" || stored === "es") return stored;
+      return navigator.language && navigator.language.toLowerCase().startsWith("es") ? "es" : "en";
+    }
+
+    function getInitialTheme() {
+      const stored = localStorage.getItem("oja-index-theme");
+      if (stored === "dark" || stored === "light") return stored;
+      return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+
+    function setTheme(theme) {
+      const copy = translations[currentLanguage];
+      document.documentElement.dataset.theme = theme;
+      localStorage.setItem("oja-index-theme", theme);
+      themeButton.textContent = theme === "dark" ? copy.themeLight : copy.themeDark;
+      themeButton.setAttribute("aria-label", copy.themeAria);
+      themeButton.setAttribute("aria-pressed", String(theme === "dark"));
+    }
+
+    function setLanguage(language) {
+      const copy = translations[language] || translations.en;
+      currentLanguage = language;
+      document.documentElement.lang = language;
+      localStorage.setItem("oja-index-language", language);
+      document.querySelectorAll("[data-i18n]").forEach(element => {
+        element.textContent = copy[element.dataset.i18n];
+      });
+      document.querySelectorAll("[data-i18n-aria]").forEach(element => {
+        element.setAttribute("aria-label", copy[element.dataset.i18nAria]);
+      });
+      document.querySelectorAll("[data-lesson-summary]").forEach(element => {
+        element.textContent = copy.summaries[Number(element.dataset.lessonSummary)];
+      });
+      document.querySelectorAll("[data-lesson-meta]").forEach(element => {
+        element.setAttribute("aria-label", copy.lessonMeta(element.dataset.lessonMeta));
+      });
+      lessons.forEach(lesson => {
+        lesson.dataset.action = copy.open;
+      });
+      languageButtons.forEach(button => {
+        const isActive = button.dataset.langOption === language;
+        button.setAttribute("aria-pressed", String(isActive));
+      });
+      search.setAttribute("placeholder", copy.searchPlaceholder);
+      setTheme(document.documentElement.dataset.theme === "dark" ? "dark" : "light");
+      filterLessons();
+    }
+
+    function filterLessons() {
+      const query = search.value.trim().toLowerCase();
+      let visibleCount = 0;
+
+      for (const lesson of lessons) {
+        const text = `${lesson.textContent} ${lesson.dataset.search}`.toLowerCase();
+        const isVisible = !query || text.includes(query);
+        lesson.hidden = !isVisible;
+        if (isVisible) visibleCount += 1;
+      }
+
+      document.body.classList.toggle("no-results", visibleCount === 0);
+    }
+
+    setTheme(getInitialTheme());
+    setLanguage(currentLanguage);
+
+    search.addEventListener("input", () => {
+      filterLessons();
+    });
+
+    themeButton.addEventListener("click", () => {
+      const current = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+      setTheme(current === "dark" ? "light" : "dark");
+    });
+
+    languageButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        setLanguage(button.dataset.langOption);
+      });
+    });
+  </script>
+</body>
+</html>
