@@ -1,0 +1,456 @@
+window.CV3_BUNDLE_METADATA = {
+  "title": "Lesson07 Negation",
+  "audio": "audio/final.mp3",
+  "segments": [
+    {
+      "id": "001",
+      "text": "Lesson 7",
+      "time_start": 0.0,
+      "time_end": 1.08
+    },
+    {
+      "id": "002",
+      "text": "To understand Japanese negatives we need one of the most important ideas in Japanese grammar: the adjective ない.",
+      "time_start": 1.33,
+      "time_end": 9.024458
+    },
+    {
+      "id": "003",
+      "text": "ない means:\n“does not exist”.\n“is not”.",
+      "time_start": 9.274458,
+      "time_end": 12.812458
+    },
+    {
+      "id": "004",
+      "text": "For inanimate things the verb for “exist” is ある.\nSo:\n“ぺん が ある”",
+      "time_start": 13.062458,
+      "time_end": 19.727875
+    },
+    {
+      "id": "005",
+      "text": "This means:\n“There is a pen.”",
+      "time_start": 19.977875,
+      "time_end": 22.075583
+    },
+    {
+      "id": "006",
+      "text": "But if we want to say there is no pen we say:\n“ぺん が ない”",
+      "time_start": 22.325583,
+      "time_end": 26.909542
+    },
+    {
+      "id": "007",
+      "text": "This means:\n“There is no pen.”",
+      "time_start": 27.159542,
+      "time_end": 28.6995
+    },
+    {
+      "id": "008",
+      "text": "In Japanese doing something uses a verb. But not doing something is treated as a state of non-action so it uses ない which works like an い-adjective.",
+      "time_start": 28.9495,
+      "time_end": 43.0095
+    },
+    {
+      "id": "009",
+      "text": "That is why negatives in Japanese are built with ない.\nNow if we want to say “This is a pen” we say:\n“これ は ぺん だ”",
+      "time_start": 43.2595,
+      "time_end": 51.810583
+    },
+    {
+      "id": "010",
+      "text": "This means:\n“As for this it is a pen.”",
+      "time_start": 52.060583,
+      "time_end": 55.234917
+    },
+    {
+      "id": "011",
+      "text": "But if we want to say “This is not a pen” we say:\n“これ は ぺん では ない”",
+      "time_start": 55.484917,
+      "time_end": 62.63725
+    },
+    {
+      "id": "012",
+      "text": "This means:\n“This is not a pen.”\nHere で is the て-form of だ. So the structure is like saying:\n“As for this as for being a pen it is not.”",
+      "time_start": 62.88725,
+      "time_end": 74.04725
+    },
+    {
+      "id": "013",
+      "text": "Now let’s look at negative verbs.\nTo make a verb negative we attach ない to the あ-stem.",
+      "time_start": 74.29725,
+      "time_end": 82.13725
+    },
+    {
+      "id": "014",
+      "text": "Japanese verbs end in a う-row kana. To make the あ-stem we move the final kana from the う-row to the あ-row.",
+      "time_start": 82.38725,
+      "time_end": 92.94725
+    },
+    {
+      "id": "015",
+      "text": "For example:\n“きく”: “きか”\n“はなす”: “はなさ”\n“もつ”: “もた”",
+      "time_start": 93.19725,
+      "time_end": 104.919125
+    },
+    {
+      "id": "016",
+      "text": "Then we add ない:\n“きく”: “きかない”: “does not hear”\n“はなす”: “はなさない”: “does not speak”\n“もつ”: “もたない”: “does not hold”",
+      "time_start": 105.169125,
+      "time_end": 120.991375
+    },
+    {
+      "id": "017",
+      "text": "There is one small exception.\nWhen a verb ends in う the あ-stem becomes わ not あ.",
+      "time_start": 121.241375,
+      "time_end": 132.135792
+    },
+    {
+      "id": "018",
+      "text": "So:\n“かう”: “かわない”\nNot:\n“かあない”",
+      "time_start": 132.385792,
+      "time_end": 138.26525
+    },
+    {
+      "id": "019",
+      "text": "This makes pronunciation easier.\nWith いちだん verbs the rule is even simpler. We remove る and add ない.",
+      "time_start": 138.51525,
+      "time_end": 148.43525
+    },
+    {
+      "id": "020",
+      "text": "For example:\n“たべる”: “たべない”",
+      "time_start": 148.68525,
+      "time_end": 151.872167
+    },
+    {
+      "id": "021",
+      "text": "This means:\n“does not eat”",
+      "time_start": 152.122167,
+      "time_end": 154.453708
+    },
+    {
+      "id": "022",
+      "text": "So the basic rule is:\n“ごだん verbs”: change the final う-row kana to the あ-row and add ない\n“いちだん verbs”: remove る and add ない",
+      "time_start": 154.703708,
+      "time_end": 166.663708
+    },
+    {
+      "id": "023",
+      "text": "Now let’s look at adjectives.\nTo change an い-adjective we usually turn the final い into く.",
+      "time_start": 166.913708,
+      "time_end": 175.673708
+    },
+    {
+      "id": "024",
+      "text": "For example:\n“あかい”: “あかく”\n“かわいい”: “かわいく”\n“こわい”: “こわく”",
+      "time_start": 175.923708,
+      "time_end": 183.203708
+    },
+    {
+      "id": "025",
+      "text": "To make the negative we add ない:\n“あかい”: “あかくない”: “is not red”\n“かわいい”: “かわいくない”: “is not cute”\n“こわい”: “こわくない”: “is not scary”",
+      "time_start": 183.453708,
+      "time_end": 202.613708
+    },
+    {
+      "id": "026",
+      "text": "To make an い-adjective past tense we remove い and add かった.",
+      "time_start": 202.863708,
+      "time_end": 208.983708
+    },
+    {
+      "id": "027",
+      "text": "For example:\n“こわい”: “こわかった”",
+      "time_start": 209.233708,
+      "time_end": 214.553708
+    },
+    {
+      "id": "028",
+      "text": "This means:\n“was scary”\nBecause ない is also an い-adjective its past form is:\n“なかった”",
+      "time_start": 214.803708,
+      "time_end": 222.363708
+    },
+    {
+      "id": "029",
+      "text": "So if we want to say “was not scary” we say:\n“こわくなかった”",
+      "time_start": 222.613708,
+      "time_end": 228.213708
+    },
+    {
+      "id": "030",
+      "text": "Now let’s apply this to verbs.\n“さくら が はしる”",
+      "time_start": 228.463708,
+      "time_end": 232.30075
+    },
+    {
+      "id": "031",
+      "text": "This means:\n“Sakura runs” or “Sakura will run.”",
+      "time_start": 232.55075,
+      "time_end": 239.43075
+    },
+    {
+      "id": "032",
+      "text": "To say “Sakura does not run” we say:\n“さくら が はしらない”",
+      "time_start": 239.68075,
+      "time_end": 245.374875
+    },
+    {
+      "id": "033",
+      "text": "はしる is a ごだん verb so る changes to ら and then we add ない.",
+      "time_start": 245.624875,
+      "time_end": 254.414125
+    },
+    {
+      "id": "034",
+      "text": "To say “Sakura ran” we say:\n“さくら が はしった”",
+      "time_start": 254.664125,
+      "time_end": 259.701292
+    },
+    {
+      "id": "035",
+      "text": "To say “Sakura did not run” we say:\n“さくら が はしらなかった”",
+      "time_start": 259.951292,
+      "time_end": 265.1285
+    },
+    {
+      "id": "036",
+      "text": "The logic is simple:\n“はしらない”: does not run\n“はしらなかった”: did not run",
+      "time_start": 265.3785,
+      "time_end": 271.600833
+    },
+    {
+      "id": "037",
+      "text": "We put ない into the past by changing it to なかった.\nNow let’s use the more natural continuous form.",
+      "time_start": 271.850833,
+      "time_end": 278.173417
+    },
+    {
+      "id": "038",
+      "text": "Instead of:\n“さくら が はしる”\nwe often say:\n“さくら が はしっている”",
+      "time_start": 278.423417,
+      "time_end": 287.017125
+    },
+    {
+      "id": "039",
+      "text": "This means:\n“Sakura is running.”",
+      "time_start": 287.267125,
+      "time_end": 289.267125
+    },
+    {
+      "id": "040",
+      "text": "To put this into the past we change いる into いた:\n“さくら が はしっていた”",
+      "time_start": 289.517125,
+      "time_end": 296.397125
+    },
+    {
+      "id": "041",
+      "text": "This means:\n“Sakura was running.”",
+      "time_start": 296.647125,
+      "time_end": 299.447125
+    },
+    {
+      "id": "042",
+      "text": "To make it negative past we change いる into いなかった:\n“さくら が はしっていなかった”",
+      "time_start": 299.697125,
+      "time_end": 306.582208
+    },
+    {
+      "id": "043",
+      "text": "This means:\n“Sakura was not running.”",
+      "time_start": 306.832208,
+      "time_end": 309.432208
+    },
+    {
+      "id": "044",
+      "text": "いる is an いちだん verb so it follows the regular pattern:\n“いる”: “いた”\n“いる”: “いない”\n“いる”: “いなかった”",
+      "time_start": 309.682208,
+      "time_end": 323.611583
+    },
+    {
+      "id": "045",
+      "text": "Japanese works like building blocks. Once you know the basic parts you can combine them to make many forms.\nThere are only a couple of important exceptions here.",
+      "time_start": 323.861583,
+      "time_end": 333.781583
+    },
+    {
+      "id": "046",
+      "text": "The first is ます.\nます is a helper verb that makes verbs formal.",
+      "time_start": 334.031583,
+      "time_end": 338.511583
+    },
+    {
+      "id": "047",
+      "text": "For example:\n“はなす”: “はなします”\n“きく”: “ききます”",
+      "time_start": 338.761583,
+      "time_end": 345.651375
+    },
+    {
+      "id": "048",
+      "text": "Normally we might expect the negative of ます to be something like “まさない” but it is not.",
+      "time_start": 345.901375,
+      "time_end": 352.301375
+    },
+    {
+      "id": "049",
+      "text": "The negative of ます is:\n“ません”",
+      "time_start": 352.551375,
+      "time_end": 355.631375
+    },
+    {
+      "id": "050",
+      "text": "So:\n“はなします”: “はなしません”\n“ききます”: “ききません”",
+      "time_start": 355.881375,
+      "time_end": 361.641375
+    },
+    {
+      "id": "051",
+      "text": "This is because formal Japanese keeps an older negative form: せん.\nThe second exception is the adjective いい meaning “is good”.",
+      "time_start": 361.891375,
+      "time_end": 373.291375
+    },
+    {
+      "id": "052",
+      "text": "いい has an older form:\n“よい”",
+      "time_start": 373.541375,
+      "time_end": 376.321958
+    },
+    {
+      "id": "053",
+      "text": "When we transform いい it goes back to よい.\nSo the past form is not:\n“いかった”",
+      "time_start": 376.571958,
+      "time_end": 383.571958
+    },
+    {
+      "id": "054",
+      "text": "It is:\n“よかった”",
+      "time_start": 383.821958,
+      "time_end": 385.418292
+    },
+    {
+      "id": "055",
+      "text": "This means:\n“was good”",
+      "time_start": 385.668292,
+      "time_end": 387.425458
+    },
+    {
+      "id": "056",
+      "text": "And the negative is not:\n“いくない”",
+      "time_start": 387.675458,
+      "time_end": 390.706833
+    },
+    {
+      "id": "057",
+      "text": "It is:\n“よくない”",
+      "time_start": 390.956833,
+      "time_end": 392.301083
+    },
+    {
+      "id": "058",
+      "text": "This means:\n“is not good”",
+      "time_start": 392.551083,
+      "time_end": 393.951083
+    },
+    {
+      "id": "059",
+      "text": "So the main patterns are:",
+      "time_start": 394.201083,
+      "time_end": 396.321083
+    },
+    {
+      "id": "060",
+      "text": "“ある”: “ない”: exists / does not exist",
+      "time_start": 396.571083,
+      "time_end": 401.689875
+    },
+    {
+      "id": "061",
+      "text": "“ぺん が ない”: there is no pen",
+      "time_start": 401.939875,
+      "time_end": 405.779875
+    },
+    {
+      "id": "062",
+      "text": "“これ は ぺん では ない”: this is not a pen",
+      "time_start": 406.029875,
+      "time_end": 409.102083
+    },
+    {
+      "id": "063",
+      "text": "“きく”: “きかない”: does not hear",
+      "time_start": 409.352083,
+      "time_end": 412.619917
+    },
+    {
+      "id": "064",
+      "text": "“はなす”: “はなさない”: does not speak",
+      "time_start": 412.869917,
+      "time_end": 417.795083
+    },
+    {
+      "id": "065",
+      "text": "“たべる”: “たべない”: does not eat",
+      "time_start": 418.045083,
+      "time_end": 420.218917
+    },
+    {
+      "id": "066",
+      "text": "“あかい”: “あかくない”: is not red",
+      "time_start": 420.468917,
+      "time_end": 425.867375
+    },
+    {
+      "id": "067",
+      "text": "“こわい”: “こわかった”: was scary",
+      "time_start": 426.117375,
+      "time_end": 431.296667
+    },
+    {
+      "id": "068",
+      "text": "“こわい”: “こわくなかった”: was not scary",
+      "time_start": 431.546667,
+      "time_end": 435.7725
+    },
+    {
+      "id": "069",
+      "text": "“はしる”: “はしらない”: does not run",
+      "time_start": 436.0225,
+      "time_end": 440.670458
+    },
+    {
+      "id": "070",
+      "text": "“はしる”: “はしらなかった”: did not run",
+      "time_start": 440.920458,
+      "time_end": 444.825042
+    },
+    {
+      "id": "071",
+      "text": "“はしっている”: “はしっていた”: was running",
+      "time_start": 445.075042,
+      "time_end": 450.734042
+    },
+    {
+      "id": "072",
+      "text": "“はしっている”: “はしっていなかった”: was not running",
+      "time_start": 450.984042,
+      "time_end": 456.375708
+    },
+    {
+      "id": "073",
+      "text": "“ます”: “ません”: formal negative",
+      "time_start": 456.625708,
+      "time_end": 460.600458
+    },
+    {
+      "id": "074",
+      "text": "“いい”: “よかった”: was good",
+      "time_start": 460.850458,
+      "time_end": 464.472375
+    },
+    {
+      "id": "075",
+      "text": "“いい”: “よくない”: is not good",
+      "time_start": 464.722375,
+      "time_end": 468.803
+    }
+  ]
+};
